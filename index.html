@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDC Inbound Verification</title>
+    <!-- Linking External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="phone-container">
+    <!-- SAP Header Zone -->
+    <div class="sap-header">
+        <div class="sap-logo">SAP</div>
+        <div class="app-title">RDC Inbound Verification</div>
+        <div class="user-icon">👤</div>
+    </div>
+
+    <!-- Scrollable Workspace App Body -->
+    <div class="app-content">
+        
+        <!-- Top Block: Input Details -->
+        <div>
+            <div class="section-title">Input Details</div>
+            
+            <div class="form-group">
+                <label class="form-label">HU Number</label>
+                <div class="input-with-icon">
+                    <input type="text" id="huNumber" value="HU00123456" placeholder="Enter HU Number">
+                    <button class="scan-btn" onclick="triggerScan('HU')">║█║</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Material Number</label>
+                <div class="input-with-icon">
+                    <input type="text" id="materialNumber" value="IA329573" placeholder="Enter Material Number">
+                    <button class="scan-btn" onclick="triggerScan('Material')">║█║</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Quantity</label>
+                <div class="counter-container">
+                    <button class="counter-btn" onclick="updateQty(-1)">−</button>
+                    <div class="counter-value" id="qtyValue">4</div>
+                    <button class="counter-btn" onclick="updateQty(1)">+</button>
+                </div>
+            </div>
+
+            <button class="btn-submit" onclick="submitData()">✓ Submit</button>
+            <button class="btn-verify" onclick="completeVerification()">🏳 Verification Done</button>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-item">
+                    <input type="checkbox" id="rustyDamage"> Rusty Damage
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox" id="wrongItem"> Wrong
+                </label>
+            </div>
+        </div>
+
+        <!-- Middle Block: Scanned Materials Table Layout -->
+        <div>
+            <div class="scanned-header">
+                <div class="section-title" style="margin:0;">Scanned Materials</div>
+                <div class="total-count" id="totalItemsText">Total Items: 3</div>
+            </div>
+            <table class="materials-table">
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Qty</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody id="materialsBody">
+                    <tr class="highlighted-row">
+                        <td><b>IA329573</b></td>
+                        <td>4</td>
+                        <td>28.10.2026 10:24</td>
+                    </tr>
+                    <tr>
+                        <td><b>IA879654</b></td>
+                        <td>2</td>
+                        <td>28.10.2026 10:20</td>
+                    </tr>
+                    <tr>
+                        <td><b>IA665321</b></td>
+                        <td>1</td>
+                        <td>28.10.2026 10:15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Bottom Block: Product Showcase Image -->
+        <div>
+            <div class="section-title">Selected Material Image</div>
+            <div class="material-image-container">
+                <img class="material-preview" src="https://excelerator.com.mx" alt="Front Bumper Panel">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Linking External JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
+    

@@ -1,0 +1,249 @@
+:root {
+    --sap-blue: #1d4ed8;
+    --sap-dark-blue: #1e3a8a;
+    --sap-header-bg: #354a5f;
+    --sap-bg: #f3f4f6;
+    --sap-border: #cccccc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--sap-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Mobile Device Frame Container */
+.phone-container {
+    width: 100%;
+    max-width: 420px;
+    height: 92vh;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+/* SAP Header */
+.sap-header {
+    background-color: var(--sap-header-bg);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    height: 45px;
+}
+
+.sap-logo {
+    font-weight: bold;
+    font-size: 18px;
+    background: #ffffff;
+    color: var(--sap-header-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.app-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.user-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Main Workspace Scrollable */
+.app-content {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+/* Form Group styling */
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--sap-border);
+    border-radius: 4px;
+    background: #fff;
+}
+
+.input-with-icon input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.scan-btn {
+    background: none;
+    border: none;
+    border-left: 1px solid var(--sap-border);
+    padding: 6px 10px;
+    cursor: pointer;
+    color: var(--sap-blue);
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* Counter Styling */
+.counter-container {
+    display: flex;
+    border: 1px solid var(--sap-border);
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.counter-btn {
+    background: #f9f9f9;
+    border: none;
+    width: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.counter-btn:active {
+    background: #eee;
+}
+
+.counter-value {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+    background: #fff;
+}
+
+/* Action Buttons */
+.btn-submit {
+    background-color: #0a6ed1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-submit:hover { background-color: #08529c; }
+
+.btn-verify {
+    background-color: white;
+    color: #0a6ed1;
+    border: 1px solid #0a6ed1;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.btn-verify:hover { background-color: #f0f7ff; }
+
+/* Checkboxes Layout */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #333;
+}
+
+/* Right / Scanned Materials Area */
+.scanned-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--sap-border);
+    padding-bottom: 4px;
+}
+
+.total-count {
+    font-size: 11px;
+    color: #666;
+}
+
+.materials-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    text-align: left;
+}
+
+.materials-table th {
+    color: #555;
+    font-weight: normal;
+    padding: 6px 4px;
+    border-bottom: 1px solid #eee;
+}
+
+.materials-table td {
+    padding: 8px 4px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.highlighted-row {
+    background-color: #e0f2fe;
+}
+
+/* Image Display Section */
+.material-image-container {
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 10px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.material-preview {
+    width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
